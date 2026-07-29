@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use FOX in your research, please cite the paper below."
+title: "FOX Project Page"
+type: software
+authors:
+  - family-names: Li
+    given-names: Yikai
+  - family-names: Wang
+    given-names: Yong
+repository-code: "https://github.com/lyk6666/FOX"
+url: "https://lyk6666.github.io/FOX-project-page/"
+preferred-citation:
+  type: article
+  title: "FOX: Visual Exploration of Data Fact Outliers"
+  authors:
+    - family-names: Li
+      given-names: Yikai
+    - family-names: Wang
+      given-names: Yong
+  year: 2026
+  notes: "Under revision. Submitted to IEEE VIS 2026."

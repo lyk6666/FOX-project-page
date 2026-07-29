@@ -3,9 +3,9 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://lyk6666.github.io/FOX-project-page/"),
-  title: "FOX · Visual Exploration of Data Fact Outliers",
+  title: "FOX: Visual Exploration of Data Fact Outliers",
   description:
-    "FOX is a visual analytics system for detecting, exploring, and explaining data fact outliers.",
+    "Academic project page for FOX, a visual analytics system for detecting and exploring data fact outliers.",
   keywords: [
     "visual analytics",
     "data fact outliers",
@@ -18,9 +18,9 @@ export const metadata: Metadata = {
     { name: "Yong Wang", url: "https://yong-wang.org/" },
   ],
   openGraph: {
-    title: "FOX · Visual Exploration of Data Fact Outliers",
+    title: "FOX: Visual Exploration of Data Fact Outliers",
     description:
-      "Find the data facts that do not fit with FOX's scope-aware outlier exploration.",
+      "A visual analytics system for scope-aware data fact outlier exploration.",
     url: "https://lyk6666.github.io/FOX-project-page/",
     siteName: "FOX",
     images: [
@@ -35,9 +35,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "FOX · Visual Exploration of Data Fact Outliers",
+    title: "FOX: Visual Exploration of Data Fact Outliers",
     description:
-      "Find the data facts that do not fit with FOX's scope-aware outlier exploration.",
+      "A visual analytics system for scope-aware data fact outlier exploration.",
     images: ["https://lyk6666.github.io/FOX-project-page/og.png"],
   },
   icons: {

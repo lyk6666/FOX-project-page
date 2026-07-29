@@ -30,13 +30,30 @@ test("server-renders the FOX project page", async () => {
 
   const html = await response.text();
   assert.match(html, /<title>FOX.*Visual Exploration of Data Fact Outliers<\/title>/i);
-  assert.match(html, /Find the facts/);
-  assert.match(html, /Two complementary signals/);
-  assert.match(html, /Validated with practicing data analysts/);
+  assert.match(html, /Abstract/);
+  assert.match(html, /Fact grouping/);
+  assert.match(html, /Similarity calculation/);
+  assert.match(html, /Outlier score/);
+  assert.match(html, /Usage Scenarios/);
+  assert.match(html, /Interview Results/);
+  assert.match(html, /Future Directions/);
   assert.match(html, /FOX-demo\.mp4/);
   assert.match(html, /FOX-paper\.pdf/);
   assert.match(html, /github\.com\/lyk6666\/FOX/);
+  assert.match(html, /kaggle\.com\/datasets\/yikai6\/supermarket-resale/);
+  assert.match(html, /kaggle\.com\/datasets\/nelgiriyewithana\/australian-vehicle-prices/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape/);
+
+  const sectionOrder = [
+    "Abstract",
+    "Video",
+    "Method",
+    "Usage Scenarios",
+    "Interview Results",
+    "Future Directions",
+  ].map((heading) => html.indexOf(`>${heading}<`));
+  assert.ok(sectionOrder.every((index) => index >= 0));
+  assert.deepEqual(sectionOrder, [...sectionOrder].sort((a, b) => a - b));
 });
 
 test("removes starter metadata and dependencies", async () => {

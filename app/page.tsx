@@ -50,7 +50,10 @@ export default function Home() {
           </a>
         </p>
         <p className="affiliation">Nanyang Technological University</p>
-        <p className="venue">Under revision - submitted to IEEE VIS 2026</p>
+        <p className="venue">
+          Accepted at IEEE VIS 2026 · To appear in IEEE Transactions on
+          Visualization and Computer Graphics (TVCG)
+        </p>
 
         <nav className="resource-links" aria-label="Publication resources">
           {resources.map((resource) =>
@@ -127,9 +130,6 @@ export default function Home() {
               measure attributes. Each group therefore defines one consistent
               analytical scope for comparison.
             </p>
-            <div className="method-rule">
-              same breakdown + same measure
-            </div>
           </article>
 
           <article>
@@ -140,10 +140,6 @@ export default function Home() {
               vectors. Exact matches on fact type and focus contribute
               complementary categorical signals.
             </p>
-            <div className="formula" aria-label="Similarity formula">
-              sim = alpha<sub>1</sub> cos + alpha<sub>2</sub> type + alpha
-              <sub>3</sub> focus
-            </div>
           </article>
 
           <article>
@@ -154,24 +150,34 @@ export default function Home() {
               entropy-aware pattern score captures rare fact types and focuses.
               Their weighted combination produces the final score.
             </p>
-            <div className="formula" aria-label="Outlier score formula">
-              S(f) = beta<sub>1</sub>S<sub>Dis</sub> + beta<sub>2</sub>max(S
-              <sub>Pat</sub>)
-            </div>
           </article>
         </div>
 
-        <figure className="academic-figure">
-          <img
-            loading="lazy"
-            src={asset("/assets/score-comparison.png")}
-            alt="Comparison of pattern-based, distribution-based, and combined outlier scoring."
-          />
-          <figcaption>
-            Distribution- and pattern-based scores capture complementary forms
-            of fact outlierness; the combined score detects both.
-          </figcaption>
-        </figure>
+        <div className="method-figure-grid">
+          <figure className="academic-figure">
+            <img
+              loading="lazy"
+              src={asset("/assets/score-comparison-hq.png")}
+              alt="Comparison of pattern-based, distribution-based, and combined outlier scoring."
+            />
+            <figcaption>
+              Distribution- and pattern-based scores capture complementary
+              forms of fact outlierness; the combined score detects both.
+            </figcaption>
+          </figure>
+
+          <figure className="academic-figure">
+            <img
+              loading="lazy"
+              src={asset("/assets/score-mechanism-hq.png")}
+              alt="FOX similarity calculation and outlier-score computation pipeline."
+            />
+            <figcaption>
+              Similarity calculation and the two-component outlier-scoring
+              pipeline.
+            </figcaption>
+          </figure>
+        </div>
       </section>
 
       <section className="paper-section" aria-labelledby="scenarios-title">
@@ -237,25 +243,6 @@ export default function Home() {
           individual facts, interpreted clusters, and evaluated the coordinated
           views using a five-point Likert scale.
         </p>
-
-        <div className="results-grid" aria-label="Key interview results">
-          <div>
-            <strong>4.75</strong>
-            <span>Effective for fact-outlier analysis</span>
-          </div>
-          <div>
-            <strong>4.67</strong>
-            <span>Cluster Insights</span>
-          </div>
-          <div>
-            <strong>4.58</strong>
-            <span>Overview of fact distributions</span>
-          </div>
-          <div>
-            <strong>4.42</strong>
-            <span>Easy to use and navigate</span>
-          </div>
-        </div>
 
         <p className="interview-summary">
           Participants valued both the Cluster Map and the natural-language

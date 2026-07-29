@@ -206,21 +206,6 @@ a:hover {
   line-height: 1.62;
 }
 
-.method-rule,
-.formula {
-  padding: 9px 10px;
-  border: 1px solid var(--line);
-  background: var(--soft);
-  color: #36414b;
-  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
-  font-size: 0.78rem;
-  line-height: 1.45;
-}
-
-.formula sub {
-  font-size: 0.7em;
-}
-
 .academic-figure {
   margin: 30px 0 8px;
 }
@@ -230,6 +215,22 @@ a:hover {
   width: 100%;
   height: auto;
   border: 1px solid var(--line);
+}
+
+.method-figure-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  align-items: start;
+  gap: 22px;
+  margin-top: 30px;
+}
+
+.method-figure-grid .academic-figure {
+  margin: 0;
+}
+
+.method-figure-grid img {
+  background: var(--white);
 }
 
 .scenario-grid {
@@ -259,40 +260,6 @@ a:hover {
 
 .dataset-link::after {
   content: " ↗";
-}
-
-.results-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  margin: 24px 0;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-}
-
-.results-grid div {
-  padding: 20px 16px;
-  border-right: 1px solid var(--line);
-  text-align: center;
-}
-
-.results-grid div:last-child {
-  border-right: 0;
-}
-
-.results-grid strong {
-  display: block;
-  color: var(--blue-dark);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.7rem;
-  line-height: 1.2;
-}
-
-.results-grid span {
-  display: block;
-  margin-top: 6px;
-  color: var(--muted);
-  font-size: 0.76rem;
-  line-height: 1.4;
 }
 
 .interview-summary {
@@ -344,26 +311,16 @@ footer p {
   }
 
   .method-grid,
+  .method-figure-grid,
   .scenario-grid,
   .future-list {
     grid-template-columns: 1fr;
   }
 
   .method-grid,
+  .method-figure-grid,
   .scenario-grid {
     gap: 24px;
-  }
-
-  .results-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .results-grid div:nth-child(2) {
-    border-right: 0;
-  }
-
-  .results-grid div:nth-child(-n + 2) {
-    border-bottom: 1px solid var(--line);
   }
 
   .abstract-text {
@@ -390,18 +347,6 @@ footer p {
     padding-left: 9px;
   }
 
-  .results-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .results-grid div {
-    border-right: 0;
-    border-bottom: 1px solid var(--line);
-  }
-
-  .results-grid div:last-child {
-    border-bottom: 0;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {

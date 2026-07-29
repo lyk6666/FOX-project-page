@@ -219,7 +219,7 @@ a:hover {
 
 .method-figure-grid {
   display: grid;
-  grid-template-columns: 1.35fr 1fr;
+  grid-template-columns: 1fr 1.35fr;
   align-items: start;
   gap: 22px;
   margin-top: 30px;
@@ -282,6 +282,27 @@ a:hover {
 
 .future-list li {
   padding-left: 4px;
+}
+
+.citation-placeholder {
+  display: grid;
+  min-height: 132px;
+  place-content: center;
+  padding: 24px;
+  border: 1px dashed #b8c3d0;
+  background: #f8fafc;
+  color: var(--muted);
+  text-align: center;
+}
+
+.citation-placeholder p {
+  margin-bottom: 5px;
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.citation-placeholder span {
+  font-size: 0.88rem;
 }
 
 footer {

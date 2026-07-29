@@ -157,24 +157,24 @@ export default function Home() {
           <figure className="academic-figure">
             <img
               loading="lazy"
-              src={asset("/assets/score-comparison-hq.png")}
-              alt="Comparison of pattern-based, distribution-based, and combined outlier scoring."
-            />
-            <figcaption>
-              Distribution- and pattern-based scores capture complementary
-              forms of fact outlierness; the combined score detects both.
-            </figcaption>
-          </figure>
-
-          <figure className="academic-figure">
-            <img
-              loading="lazy"
               src={asset("/assets/score-mechanism-hq.png")}
               alt="FOX similarity calculation and outlier-score computation pipeline."
             />
             <figcaption>
               Similarity calculation and the two-component outlier-scoring
               pipeline.
+            </figcaption>
+          </figure>
+
+          <figure className="academic-figure">
+            <img
+              loading="lazy"
+              src={asset("/assets/score-comparison-hq.png")}
+              alt="Comparison of pattern-based, distribution-based, and combined outlier scoring."
+            />
+            <figcaption>
+              Distribution- and pattern-based scores capture complementary
+              forms of fact outlierness; the combined score detects both.
             </figcaption>
           </figure>
         </div>
@@ -273,6 +273,14 @@ export default function Home() {
             </li>
           ))}
         </ul>
+      </section>
+
+      <section className="paper-section" aria-labelledby="citation-title">
+        <h2 id="citation-title">Citation</h2>
+        <div className="citation-placeholder">
+          <p>Final citation details will be added upon publication.</p>
+          <span>DOI, volume, issue, and page numbers forthcoming.</span>
+        </div>
       </section>
 
       <footer>

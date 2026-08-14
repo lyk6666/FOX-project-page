@@ -1,9 +1,8 @@
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 const asset = (path: string) => `${basePath}${path}`;
 
-// Add the final publication URLs here when they become available.
-const arxivUrl: string | null = null;
-const doiUrl: string | null = null;
+const arxivUrl = "https://arxiv.org/abs/2608.08671";
+const doiUrl = "https://doi.org/10.48550/arXiv.2608.08671";
 const slidesUrl: string | null = null;
 
 const resources = [
@@ -278,8 +277,14 @@ export default function Home() {
       <section className="paper-section" aria-labelledby="citation-title">
         <h2 id="citation-title">Citation</h2>
         <div className="citation-placeholder">
-          <p>Final citation details will be added upon publication.</p>
-          <span>DOI, volume, issue, and page numbers forthcoming.</span>
+          <p>
+            Li, Y., &amp; Wang, Y. (2026). FOX: Visual Exploration of Data
+            Fact Outliers. arXiv:2608.08671 [cs.HC].
+          </p>
+          <span>
+            DOI: <a href={doiUrl}>10.48550/arXiv.2608.08671</a>. Final TVCG
+            volume, issue, and page numbers are forthcoming.
+          </span>
         </div>
       </section>
 

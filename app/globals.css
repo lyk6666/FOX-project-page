@@ -180,7 +180,7 @@ a:hover {
 
 .method-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 26px;
 }
 
@@ -262,28 +262,6 @@ a:hover {
   content: " ↗";
 }
 
-.interview-summary {
-  color: #45494f;
-}
-
-.compact-figure {
-  width: min(100%, 860px);
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.future-list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px 32px;
-  margin: 0;
-  padding-left: 1.2rem;
-}
-
-.future-list li {
-  padding-left: 4px;
-}
-
 .citation-placeholder {
   display: grid;
   min-height: 132px;
@@ -333,8 +311,7 @@ footer p {
 
   .method-grid,
   .method-figure-grid,
-  .scenario-grid,
-  .future-list {
+  .scenario-grid {
     grid-template-columns: 1fr;
   }
 

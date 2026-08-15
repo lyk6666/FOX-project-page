@@ -31,12 +31,14 @@ test("server-renders the FOX project page", async () => {
   const html = await response.text();
   assert.match(html, /<title>FOX.*Visual Exploration of Data Fact Outliers<\/title>/i);
   assert.match(html, /Abstract/);
+  assert.match(html, /Data Fact Processing/);
+  assert.match(html, /Data fact extraction/);
   assert.match(html, /Fact grouping/);
   assert.match(html, /Similarity calculation/);
   assert.match(html, /Outlier score/);
   assert.match(html, /Usage Scenarios/);
-  assert.match(html, /Interview Results/);
-  assert.match(html, /Future Directions/);
+  assert.doesNotMatch(html, /Interview Results/);
+  assert.doesNotMatch(html, /Future Directions/);
   assert.match(html, /FOX-demo\.mp4/);
   assert.match(html, /FOX-paper\.pdf/);
   assert.match(html, /github\.com\/lyk6666\/FOX/);
@@ -47,10 +49,9 @@ test("server-renders the FOX project page", async () => {
   const sectionOrder = [
     "Abstract",
     "Video",
-    "Method",
+    "Data Fact Processing",
     "Usage Scenarios",
-    "Interview Results",
-    "Future Directions",
+    "Citation",
   ].map((heading) => html.indexOf(`>${heading}<`));
   assert.ok(sectionOrder.every((index) => index >= 0));
   assert.deepEqual(sectionOrder, [...sectionOrder].sort((a, b) => a - b));

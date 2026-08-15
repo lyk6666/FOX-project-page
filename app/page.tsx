@@ -181,58 +181,74 @@ export default function Home() {
 
       <section className="paper-section" aria-labelledby="scenarios-title">
         <h2 id="scenarios-title">Usage Scenarios</h2>
-        <div className="scenario-grid">
-          <article>
-            <p className="section-label">Scenario 1</p>
-            <h3>Supermarket sales</h3>
-            <p>
-              Among 14 fact groups, seven contain outliers. FOX reveals a
-              negative discount-sales relationship for technology products
-              shipped by second-class delivery, joint sales dominance by two
-              supermarkets for consumer furniture, and two unusual decreasing
-              quantity trends.
-            </p>
-            <a
-              className="dataset-link"
-              href="https://www.kaggle.com/datasets/yikai6/supermarket-resale"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Kaggle dataset
-            </a>
+        <div className="scenario-list">
+          <article className="scenario-row">
+            <div className="scenario-copy">
+              <p className="section-label">Scenario 1</p>
+              <h3>Supermarket sales</h3>
+              <p>
+                Among 14 fact groups, seven contain outliers. FOX reveals a
+                negative discount-sales relationship for technology products
+                shipped by second-class delivery, joint sales dominance by two
+                supermarkets for consumer furniture, and two unusual decreasing
+                quantity trends.
+              </p>
+              <a
+                className="dataset-link"
+                href="https://www.kaggle.com/datasets/yikai6/supermarket-resale"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Kaggle dataset
+              </a>
+            </div>
+            <figure className="scenario-demo">
+              <img
+                loading="lazy"
+                decoding="async"
+                src={asset("/assets/scenario-supermarket.gif")}
+                alt="Animated FOX workflow for investigating supermarket sales fact outliers."
+              />
+              <figcaption>
+                From an Overview Panel cell to its detailed finding in the Main
+                Panel.
+              </figcaption>
+            </figure>
           </article>
 
-          <article>
-            <p className="section-label">Scenario 2</p>
-            <h3>Australian vehicle prices</h3>
-            <p>
-              Among 18 fact groups, three contain outliers. FOX identifies
-              distinct front- and four-wheel-drive distance patterns, together
-              with a rare utility-vehicle sales-dominance fact under diesel and
-              manual-transmission conditions, with an outlier score of 0.67.
-            </p>
-            <a
-              className="dataset-link"
-              href="https://www.kaggle.com/datasets/nelgiriyewithana/australian-vehicle-prices"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Kaggle dataset
-            </a>
+          <article className="scenario-row">
+            <div className="scenario-copy">
+              <p className="section-label">Scenario 2</p>
+              <h3>Australian vehicle prices</h3>
+              <p>
+                Among 18 fact groups, three contain outliers. FOX identifies
+                distinct front- and four-wheel-drive distance patterns, together
+                with a rare utility-vehicle sales-dominance fact under diesel and
+                manual-transmission conditions, with an outlier score of 0.67.
+              </p>
+              <a
+                className="dataset-link"
+                href="https://www.kaggle.com/datasets/nelgiriyewithana/australian-vehicle-prices"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Kaggle dataset
+              </a>
+            </div>
+            <figure className="scenario-demo">
+              <img
+                loading="lazy"
+                decoding="async"
+                src={asset("/assets/scenario-vehicle.gif")}
+                alt="Animated FOX workflow for investigating Australian vehicle fact outliers."
+              />
+              <figcaption>
+                Coordinated exploration of drivetrain and vehicle-category
+                outliers.
+              </figcaption>
+            </figure>
           </article>
         </div>
-
-        <figure className="academic-figure">
-          <img
-            loading="lazy"
-            src={asset("/assets/case-studies.png")}
-            alt="FOX usage scenarios with supermarket sales and Australian vehicle data."
-          />
-          <figcaption>
-            Representative findings from the two public datasets used in the
-            paper.
-          </figcaption>
-        </figure>
       </section>
 
       <section className="paper-section" aria-labelledby="citation-title">

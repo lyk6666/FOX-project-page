@@ -219,7 +219,7 @@ export default function Home() {
           <article className="scenario-row">
             <div className="scenario-copy">
               <p className="section-label">Scenario 2</p>
-              <h3>Australian vehicle prices</h3>
+              <h3>Australian Car Sales</h3>
               <p>
                 Among 18 fact groups, three contain outliers. FOX identifies
                 distinct front- and four-wheel-drive distance patterns, together
@@ -240,7 +240,7 @@ export default function Home() {
                 loading="lazy"
                 decoding="async"
                 src={asset("/assets/scenario-vehicle.gif")}
-                alt="Animated FOX workflow for investigating Australian vehicle fact outliers."
+                alt="Animated FOX workflow for investigating Australian car sales fact outliers."
               />
               <figcaption>
                 Coordinated exploration of drivetrain and vehicle-category
